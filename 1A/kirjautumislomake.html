@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akun ja Nikon kirjautumislomake</title>
+    <link rel="stylesheet" type="text/css" href="kirjautumislomake.css" />
+  </head>
+  <body>
+    <fieldset>
+      <h1><b>Turha Kirjautumislomake</b></h1>
+      <label for="nimi">Nimi:</label>
+      <input type="text" id="nimi" /><br />
+      <label for="sähköposti">Sähköposti:</label>
+      <input type="email" id="sähköposti" /><br />
+      <label for="salasana">Salasana:</label>
+      <input type="password" id="salasana" /><br />
+      <label for="textarea">Tekstialue: </label><br />
+      <textarea id="textarea" cols="50" rows="10"></textarea><br />
+      <p><b>Kuinka paljon haluat roskapostia?</b></p>
+      <label for="radio">Paljon!</label>
+      <input type="radio" id="radio" /><br />
+      <label for="radio">Erittäin Paljon!</label>
+      <input type="radio" id="radio" /><br />
+      <p><b>Mistä pidät eniten tästä lomakeesta?</b></p>
+      <label for="like1">Lyhyys</label>
+      <input type="checkbox" id="like1" /><br />
+      <label for="like2">Tylsyys</label>
+      <input type="checkbox" id="like2" /><br />
+      <label for="like3">Roskaposti</label>
+      <input type="checkbox" id="like3" /><br />
+      <label for="like4">Turhautuminen</label>
+      <input type="checkbox" id="like4" /><br />
+      <input type="submit" id="laheta" value="Lähetä turha lomake" />
+      <input type="submit" id="tyhjenna" value="Tyhjennä lomake" />
+    </fieldset>
+  </body>
+  <script src="kirjautumislomake.js"></script>
+</html>
