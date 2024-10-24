@@ -4,8 +4,8 @@ function tarkista(){
     let salaSana = document.getElementById("salasana").value
     let sahkoPosti = document.getElementById("sähköposti").value
     let palaute = document.getElementById("textarea").value
-    let checkBox1 = document.getElementById("radio").value
-    let checkBox2 = document.getElementById("checkbox").value
+    let checkBox1 = document.querySelector("radio").checked
+    let checkBox2 = document.querySelector("checkbox").checked
 
     if (etuNimi.trim() == ""){
         alert("Etunimi puuttuu")
@@ -19,10 +19,10 @@ function tarkista(){
     else if (palaute.trim() == ""){
         alert("Palaute on tyhjä")
     }
-    else if (document.getElementById("radio").checked = false){
+    else if (checkBox1 == false){
         alert("Valitse jotain")
     }
-    else if (document.getElementById("checkbox").checked = false){
+    else if (checkBox2 == false){
         alert("Valitse jotain")
     }
     else{
