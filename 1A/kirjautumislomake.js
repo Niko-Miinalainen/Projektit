@@ -1,18 +1,14 @@
 function tarkista(){
 
-    let etuNimi = document.getElementById("").value
-    let sukuNimi = document.getElementById("").value
-    let salaSana = document.getElementById("").value
-    let sahkoPosti = document.getElementById("").value
-    let palaute = document.getElementById("").value
-    let checkBox1 = document.querySelector("").checked
+    let etuNimi = document.getElementById("nimi").value
+    let salaSana = document.getElementById("salasana").value
+    let sahkoPosti = document.getElementById("sähköposti").value
+    let palaute = document.getElementById("textarea").value
+    let checkBox1 = document.querySelector("radio").checked
     let checkBox2 = document.querySelector("").checked
 
     if (etuNimi.trim() = ""){
         alert("Etunimi puuttuu")
-    }
-    else if (sukuNimi.trim() = ""){
-        alert("Sukunimi puuttuu")
     }
     else if (salaSana.trim() = ""){
         alert("Salasana puuttuu")
@@ -24,10 +20,13 @@ function tarkista(){
         alert("Palaute on tyhjä")
     }
     else if (checkBox1 = false){
-        alert("Valitse toinen")
+        alert("Valitse jotain")
     }
     else if (checkBox2 = false){
-        alert("Valitse yksi")
+        alert("Valitse jotain")
+    }
+    else{
+        alert("Lähetetty")
     }
 }
 
