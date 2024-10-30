@@ -6,6 +6,45 @@
     <title>Akun ja Nikon 1B Kirjautumislomake</title>
     <link rel="stylesheet" type="text/css" href="1Bkirjautumislomake.css" />
   </head>
-  <body></body>
+  <body>
+    <fieldset>
+      <h1 id="otsikko">Lomake</h1>
+      <p id="kuvaus">Turha lomake</p>
+      <form id="kyselylomake">
+        <label for="nimisyotto">Nimi:</label>
+        <input
+          type="text"
+          id="nimi"
+          minlength="4"
+          placeholder="Kirjoita nimi tähän"
+        />
+        <br />
+        <label for="emailsyotto">Sähköposti:</label>
+        <input type="email" placeholder="Kirjoita sähköposti tähän" /> <br />
+        <label for="ikasyotto">Ikä:</label>
+        <input type="number" placeholder="Kirjoita ikäsi tähän" /> <br />
+        <select name="pudotus" id="pudotus">
+          <option value="Yksi">Yksi</option>
+          <option value="Kaksi">Kaksi</option>
+          <option value="Kolme">Kolme</option>
+        </select>
+        <br />
+        <label for="radio">Yksi</label>
+        <input type="radio" id="radio1" /> <br />
+        <label for="radio">Kaksi</label>
+        <input type="radio" id="radio2" /> <br />
+        <label for="arvo1">Yksi</label>
+        <input type="checkbox" id="checkbox1" /> <br />
+        <label for="arvo2">Kaksi</label>
+        <input type="checkbox" id="checkbox2" /> <br />
+        <label for="arvo3">Kolme</label>
+        <input type="checkbox" id="checkbox3" /> <br />
+        <p>Anna lisä kommentteja</p>
+        <textarea name="textarea" id="textara" cols="30" rows="10"></textarea>
+        <br />
+        <button onclick=""></button>
+      </form>
+    </fieldset>
+  </body>
   <script src="1Bkirjautumislomake.js"></script>
 </html>
