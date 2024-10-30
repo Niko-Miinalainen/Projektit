@@ -2,20 +2,20 @@ function tarkista() {
   let nimi = document.getElementById("nimi").value;
   let email = document.getElementById("email").value;
   let ika = document.getElementById("ika").value;
-  let pudotus = document.getElementById("pudotus").value;
   let radio1 = document.getElementById("radio1").checked;
   let radio2 = document.getElementById("radio2").checked;
   let checkBox1 = document.getElementById("checkbox1").checked;
   let checkBox2 = document.getElementById("checkbox2").checked;
   let checkBox3 = document.getElementById("checkbox3").checked;
   let textara = document.getElementById("textara").value;
-
   if (nimi.trim() == "") {
     alert("Anna nimi");
-  } else if (3 > nimi.lenght) {
+  } else if (3 > nimi.length) {
     alert("Nimi on liian lyhyt");
   } else if (email.trim() == "") {
     alert("Anna sähköposti");
+  } else if (emailIsValid(email) == false) {
+    alert("Anna kunnollinen sähköposti");
   } else if (ika.trim() == "") {
     alert("Anna ikä");
   } else if (isNaN(ika) != false) {
@@ -30,4 +30,7 @@ function tarkista() {
     alert("Kaikki on lähetetty!");
   }
   event.preventDefault();
+}
+function emailIsValid(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
