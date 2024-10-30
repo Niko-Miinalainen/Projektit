@@ -17,6 +17,7 @@
           id="nimi"
           minlength="4"
           placeholder="Kirjoita nimi tähän"
+          required
         />
         <br />
         <label for="emailsyotto">Sähköposti:</label>
@@ -24,10 +25,16 @@
           type="email"
           id="email"
           placeholder="Kirjoita sähköposti tähän"
+          required
         />
         <br />
         <label for="ikasyotto">Ikä:</label>
-        <input type="number" id="ika" placeholder="Kirjoita ikäsi tähän" />
+        <input
+          type="number"
+          id="ika"
+          placeholder="Kirjoita ikäsi tähän"
+          required
+        />
         <br />
         <p>Valitse jokin</p>
         <select name="pudotus" id="pudotus">
@@ -37,11 +44,15 @@
         </select>
         <br />
         <p>Täytitkö lomakkeen?</p>
-        <label for="radio">Kyllä</label>
-        <input type="radio" id="radio1" /> <br />
-        <label for="radio">Ei</label>
-        <input type="radio" id="radio2" /> <br />
-        <p>Oliko kivaa?</p>
+        <label for="radio"
+          ><input type="radio" name="radio" id="radio1" required /> Kyllä</label
+        >
+        <br />
+        <label for="radio"
+          ><input type="radio" name="radio" id="radio2" /> En</label
+        >
+        <br />
+        <p>Oliko kivaa? Tämä kohta on valinnainen</p>
         <label for="arvo1">Kyllä</label>
         <input type="checkbox" id="checkbox1" /> <br />
         <label for="arvo2">Ei</label>
@@ -49,9 +60,16 @@
         <label for="arvo3">Ehkä</label>
         <input type="checkbox" id="checkbox3" /> <br />
         <p>Anna lisä kommentteja</p>
-        <textarea name="textarea" id="textara" cols="30" rows="3"></textarea>
+        <textarea
+          name="textarea"
+          id="textara"
+          cols="30"
+          rows="3"
+          required
+        ></textarea>
         <br />
-        <button id="laheta" onclick="tarkista()">Lähetä</button>
+        <button id="laheta" onclick="tarkista()">Tarkista</button>
+        <input id="laheta" type="submit" value="Submit" />
       </form>
     </fieldset>
   </body>
