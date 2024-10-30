@@ -33,6 +33,7 @@ function tarkista() {
   if (checkBox1 == false && checkBox2 == false && checkBox3 == false) {
     alert("Valitse laatikoita");
   }
+  event.preventDefault()
 }
 
 function emailIsValid(email) {
