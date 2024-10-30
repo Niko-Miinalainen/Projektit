@@ -5,5 +5,12 @@ body {
   background-image: linear-gradient(to left, purple, gold);
 }
 fieldset {
+  text-align: center;
   background-color: lightblue;
+}
+.painike {
+  width: 30px;
+  height: 40px;
+  margin: 2px;
+  background-color: gold;
 }
