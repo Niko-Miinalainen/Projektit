@@ -23,26 +23,29 @@
         <input type="email" placeholder="Kirjoita sähköposti tähän" /> <br />
         <label for="ikasyotto">Ikä:</label>
         <input type="number" placeholder="Kirjoita ikäsi tähän" /> <br />
+        <p>Valitse jokin</p>
         <select name="pudotus" id="pudotus">
           <option value="Yksi">Yksi</option>
           <option value="Kaksi">Kaksi</option>
           <option value="Kolme">Kolme</option>
         </select>
         <br />
-        <label for="radio">Yksi</label>
+        <p>Täytitkö lomakkeen?</p>
+        <label for="radio">Kyllä</label>
         <input type="radio" id="radio1" /> <br />
-        <label for="radio">Kaksi</label>
+        <label for="radio">Ei</label>
         <input type="radio" id="radio2" /> <br />
-        <label for="arvo1">Yksi</label>
+        <p>Oliko kivaa?</p>
+        <label for="arvo1">Kyllä</label>
         <input type="checkbox" id="checkbox1" /> <br />
-        <label for="arvo2">Kaksi</label>
+        <label for="arvo2">Ei</label>
         <input type="checkbox" id="checkbox2" /> <br />
-        <label for="arvo3">Kolme</label>
+        <label for="arvo3">Ehkä</label>
         <input type="checkbox" id="checkbox3" /> <br />
         <p>Anna lisä kommentteja</p>
-        <textarea name="textarea" id="textara" cols="30" rows="10"></textarea>
+        <textarea name="textarea" id="textara" cols="30" rows="3"></textarea>
         <br />
-        <button onclick=""></button>
+        <button id="laheta" onclick="">Lähetä</button>
       </form>
     </fieldset>
   </body>
