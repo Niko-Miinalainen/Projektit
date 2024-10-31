@@ -1,0 +1,23 @@
+body {
+  margin: auto 0;
+  padding: 10px;
+}
+.laskin {
+  border: 2px solid black;
+  border-collapse: collapse;
+  width: 400px;
+  height: 500px;
+}
+.laskin td {
+  border: 2px solid black;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  background-color: purple;
+}
+.nappi {
+  border: 2px solid black;
+  height: 60px;
+  width: 60px;
+  background-color: gold;
+}
