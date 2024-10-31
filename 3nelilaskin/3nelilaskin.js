@@ -38,8 +38,9 @@ function yhtasuuri() {
     }
   }
   resetoi();
-  luku = eval(summa.join(""));
-  näyttö();
+  luku.push(eval(summa.join("")));
+  näyttö = "" + luku[0];
+  document.getElementById("taulu").innerHTML = näyttö;
 }
 
 function miniresetoi() {
