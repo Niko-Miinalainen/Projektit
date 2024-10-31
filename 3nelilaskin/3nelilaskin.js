@@ -2,6 +2,7 @@ let luku = [];
 let functio = [];
 let näyttö = "";
 
+// päivittää näytön
 function naytto() {
   näyttö = "";
   for (let i = 0; i < luku.length; i++) {
@@ -13,6 +14,7 @@ function naytto() {
   document.getElementById("taulu").innerHTML = näyttö;
 }
 
+// lisää laskutoimittimet?
 function toiminto(funktio) {
   if (functio.length < luku.length) {
     functio.push(funktio);
@@ -20,6 +22,7 @@ function toiminto(funktio) {
   }
 }
 
+//lisää numerot ja pilkut
 function numeronlisays(num) {
   if (luku.length <= functio.length || luku.length == 0) {
     luku.push(num);
@@ -29,6 +32,7 @@ function numeronlisays(num) {
   naytto();
 }
 
+// summa näppäin
 function yhtasuuri() {
   let summa = [];
   for (let i = 0; i < luku.length; i++) {
@@ -43,6 +47,7 @@ function yhtasuuri() {
   document.getElementById("taulu").innerHTML = näyttö;
 }
 
+// poistaa viimeisinmän osuuden
 function miniresetoi() {
   if (luku.length <= functio.length) {
     functio.pop();
@@ -52,6 +57,7 @@ function miniresetoi() {
   naytto();
 }
 
+//resetoi duhh
 function resetoi() {
   luku.length = 0;
   functio.length = 0;
