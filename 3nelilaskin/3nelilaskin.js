@@ -13,12 +13,24 @@ function naytto() {
   document.getElementById("taulu").innerHTML = näyttö;
 }
 
-function resetoi() {
-  luku.length = 0;
-  functio.length = 0;
-  näyttö = "";
-  document.getElementById("taulu").innerHTML = "";
+function toiminto(funktio) {
+  if (functio.length < luku.length) {
+    functio.push(funktio);
+    naytto();
+  }
 }
+
+function numeronlisays(num) {
+  if (luku.length > functio.length || luku.length == 0) {
+    luku.push(num);
+    naytto();
+  } else {
+    luku[luku.length] += num;
+    naytto();
+  }
+}
+
+function yhtasuuri() {}
 
 function miniresetoi() {
   if (luku.length <= functio.length) {
@@ -29,21 +41,9 @@ function miniresetoi() {
   naytto();
 }
 
-function toiminto(funktio) {
-  if (functio.length < luku.length) {
-    functio.push(funktio);
-    naytto();
-  }
-}
-
-function yhtasuuri() {}
-
-function numeronlisays(num) {
-  if (luku.length > functio.length || luku.length == 0) {
-    luku.push(num);
-    naytto();
-  } else {
-    luku[luku.length] += num;
-    naytto();
-  }
+function resetoi() {
+  luku.length = 0;
+  functio.length = 0;
+  näyttö = "";
+  document.getElementById("taulu").innerHTML = "";
 }
