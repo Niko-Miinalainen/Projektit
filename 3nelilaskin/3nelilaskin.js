@@ -4,7 +4,7 @@ let näyttö = "";
 
 function naytto() {
   näyttö = "";
-  for (let i = 0; 0 < luku.length; i++) {
+  for (let i = 0; i < luku.length; i++) {
     näyttö += luku[i];
     if (functio.length > i) {
       näyttö += functio[i];
@@ -21,16 +21,26 @@ function toiminto(funktio) {
 }
 
 function numeronlisays(num) {
-  if (luku.length > functio.length || luku.length == 0) {
+  if (luku.length <= functio.length || luku.length == 0) {
     luku.push(num);
-    naytto();
   } else {
-    luku[luku.length] += num;
-    naytto();
+    luku[luku.length - 1] += num;
   }
+  naytto();
 }
 
-function yhtasuuri() {}
+function yhtasuuri() {
+  let summa = [];
+  for (let i = 0; i < luku.length; i++) {
+    summa.push(luku[i]);
+    if (functio.length > i) {
+      summa.push(functio[i]);
+    }
+  }
+  resetoi();
+  luku = eval(summa.join(""));
+  näyttö();
+}
 
 function miniresetoi() {
   if (luku.length <= functio.length) {
