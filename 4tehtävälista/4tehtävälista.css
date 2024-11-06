@@ -41,16 +41,19 @@ ul {
   padding: 5px;
 }
 li {
-  height: 30px;
-  width: 200px;
+  min-height: 30px;
+  margin-left: 30px;
+  width: 500px;
   list-style: none;
   border: 2px solid;
-  margin-bottom: 20px;
-  background: blue;
-  color: gold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  background: darkblue;
+  color: white;
 }
 li:hover {
-  background: #76cfe0;
+  background: darkgray;
 }
 
 li > button {
@@ -58,12 +61,12 @@ li > button {
   background: none;
   border: none;
   float: right;
-  color: #025f70;
+  color: white;
   font-weight: 800;
 }
 .done {
-  background: #51df70 !important;
-  color: #00891e;
+  background: darkgreen !important;
+  color: white;
 }
 .delete {
   display: none;
