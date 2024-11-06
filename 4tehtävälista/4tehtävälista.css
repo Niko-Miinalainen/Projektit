@@ -35,3 +35,36 @@ input {
   color: darkgreen;
   text-align: center;
 }
+ul {
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+}
+li {
+  height: 30px;
+  width: 200px;
+  list-style: none;
+  border: 2px solid;
+  margin-bottom: 20px;
+  background: blue;
+  color: gold;
+}
+li:hover {
+  background: #76cfe0;
+}
+
+li > button {
+  font-weight: normal;
+  background: none;
+  border: none;
+  float: right;
+  color: #025f70;
+  font-weight: 800;
+}
+.done {
+  background: #51df70 !important;
+  color: #00891e;
+}
+.delete {
+  display: none;
+}

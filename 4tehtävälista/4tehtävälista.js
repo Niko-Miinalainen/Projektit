@@ -20,7 +20,7 @@ function luoLista(){
     function tehty(){
         li.classList.toggle("done")
     }
-    li.addEventListener("click", tehty())
+    li.addEventListener("click", tehty)
 
     var poisto = document.createElement("button")
     poisto.appendChild(document.createTextNode("X"))
