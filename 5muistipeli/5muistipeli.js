@@ -11,6 +11,7 @@ let array = [
 let korkeus = 0;
 let leveys = 0;
 let arvaukset = 0;
+let auki = 0;
 
 function resetoi() {
   array = [
@@ -26,6 +27,7 @@ function resetoi() {
   korkeus = 0;
   leveys = 0;
   arvaukset = 0;
+  auki = 0;
 }
 
 function suuruus() {
