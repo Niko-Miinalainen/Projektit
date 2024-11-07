@@ -1,47 +1,46 @@
 let array = [
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0],
 ];
 let korkeus = 0;
 let leveys = 0;
 let arvaukset = 0;
 let auki = 0;
+let korttimäärä = 0;
 
 function resetoi() {
   array = [
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
   ];
   korkeus = 0;
   leveys = 0;
   arvaukset = 0;
   auki = 0;
+  korttimäärä = 0;
 }
 
 function suuruus() {
   let luku = parseInt(document.getElementById("korkeus").value) - 1;
   let luku2 = parseInt(document.getElementById("leveys").value) - 1;
-  if (luku > 7) {
+  if (luku > 5) {
     alert("korkeus on liian iso!");
-  } else if (luku2 > 7) {
+  } else if (luku2 > 5) {
     alert("leveys on liian iso!");
   } else if ((luku * luku2) % 2 != 0) {
     alert("Kokojen kertoma ei ole parillinen!");
   } else {
     korkeus = luku;
     leveys = luku2;
+    korttimäärä = (luku * luku2) / 2;
     luo();
   }
   event.preventDefault();
