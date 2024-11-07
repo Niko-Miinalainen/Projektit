@@ -1,0 +1,10 @@
+body {
+  margin: 0 auto;
+  width: 500px;
+  padding: 10px;
+  background-image: linear-gradient(to left, purple, gold);
+}
+fieldset {
+  text-align: center;
+  background-color: lightblue;
+}
