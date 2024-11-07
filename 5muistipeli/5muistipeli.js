@@ -39,13 +39,14 @@ function resetoi() {
 }
 
 function suuruus() {
-  let luku = parseInt(document.getElementById("korkeus").value) - 1;
-  let luku2 = parseInt(document.getElementById("leveys").value) - 1;
-  if (luku > 5) {
+  let luku = parseInt(document.getElementById("korkeus").value);
+  let luku2 = parseInt(document.getElementById("leveys").value);
+  let kertoma = luku * luku2;
+  if (luku > 6) {
     alert("korkeus on liian iso!");
-  } else if (luku2 > 5) {
+  } else if (luku2 > 6) {
     alert("leveys on liian iso!");
-  } else if ((luku * luku2) % 2 != 0) {
+  } else if (kertoma % 2 != 0) {
     alert("Kokojen kertoma ei ole parillinen!");
   } else {
     korkeus = luku;
