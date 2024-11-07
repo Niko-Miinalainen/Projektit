@@ -10,198 +10,131 @@
     <fieldset>
       <h1>Muistipeli</h1>
       <p>Paina alla olevia kuvia ja löydä parit</p>
-      <button onclick="">Reset</button>
+      <label for="">Anna korkeus</label>
+      <input type="text" id="korkeus" /><br />
+      <label for="">Anna leveys</label>
+      <input type="text" id="leveys" /><br />
+      <button onclick="resetoi()">Reset</button>
+      <button onclick="suuruus()">Luo</button>
       <br />
       <tr id="Rivi 1">
         <td>
-          <button id="kuva1-1">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva00" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva1-2">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva01" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva1-3">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva02" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva1-4">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva03" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva1-5">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva04" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva1-6">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva05" alt=" " onclick="arvaa(0,0)" />
         </td>
       </tr>
       <tr id="Rivi 2">
         <td>
-          <button id="kuva2-1">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva10" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva2-2">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva11" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva2-3">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva12" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva2-4">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva13" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva2-5">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva14" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva2-6">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva15" alt=" " onclick="arvaa(0,0)" />
         </td>
       </tr>
       <tr id="Rivi 3">
         <td>
-          <button id="kuva3-1">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva20" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva3-2">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva21" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva3-3">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva22" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva3-4">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva23" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva3-5">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva24" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva3-6">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva25" alt=" " onclick="arvaa(0,0)" />
         </td>
       </tr>
       <tr id="Rivi 4">
         <td>
-          <button id="kuva4-1">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva30" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva4-2">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva31" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva4-3">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva32" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva4-4">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva33" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva4-5">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva34" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva4-6">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva35" alt=" " onclick="arvaa(0,0)" />
         </td>
       </tr>
       <tr id="Rivi 5">
         <td>
-          <button id="kuva5-1">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva40" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva5-2">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva41" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva5-3">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva42" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva5-4">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva43" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva5-5">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva44" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva5-6">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva45" alt=" " onclick="arvaa(0,0)" />
         </td>
       </tr>
       <tr id="Rivi 6">
         <td>
-          <button id="kuva6-1">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva50" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva6-2">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva51" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva6-3">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva52" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva6-4">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva53" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva6-5">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva54" alt=" " onclick="arvaa(0,0)" />
         </td>
         <td>
-          <button id="kuva6-6">
-            <img src="kuvat/kuva0.png" alt=" " />
-          </button>
+          <img src="kuvat/kuva0.png" id="kuva55" alt=" " onclick="arvaa(0,0)" />
         </td>
       </tr>
     </fieldset>
