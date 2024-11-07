@@ -33,7 +33,7 @@ function resetoi() {
   vanha2.length = 0;
   for (let l1 = 0; li < 6; l1++) {
     for (let l2 = 0; l2 < 6; l2++) {
-      document.getElementById("kuva" + l1 + "-" + l2).src = "kuvat/kuva0.png";
+      document.getElementById("kuva" + l1 + l2).src = "kuvat/kuva0.png";
     }
   }
 }
@@ -57,7 +57,7 @@ function suuruus() {
 }
 
 function luo() {
-  for (let l1 = 0; li < korkeus; l1++) {
+  for (let l1 = 0; l1 < korkeus; l1++) {
     for (let l2 = 0; l2 < leveys; l2++) {
       let kortti = Math.floor(Math.random() * korttimäärä) + 2;
       let tarkistus = 0;
@@ -72,7 +72,7 @@ function luo() {
         l2--;
       } else {
         array[l1][l2] = kortti;
-        document.getElementById("kuva" + l1 + "-" + l2).src = "kuvat/kuva1.png";
+        document.getElementById("kuva" + l1 + l2).src = "kuvat/kuva1.png";
       }
     }
   }
@@ -80,9 +80,9 @@ function luo() {
 
 function arvaa(l1, l2) {
   if (vanha1.length > 0 && vanha2.length > 0) {
-    document.getElementById("kuva" + vanha1[0] + "-" + vanha1[1]).src =
+    document.getElementById("kuva" + vanha1[0] + vanha1[1]).src =
       "kuvat/kuva1.png";
-    document.getElementById("kuva" + vanha2[0] + "-" + vanha2[1]).src =
+    document.getElementById("kuva" + vanha2[0] + vanha2[1]).src =
       "kuvat/kuva1.png";
     vanha1.length = 0;
     vanha2.length = 0;
@@ -90,14 +90,14 @@ function arvaa(l1, l2) {
   if (auki == 0) {
     auki = 1;
     arvattu = array[l1][l2];
-    document.getElementById("kuva" + l1 + "-" + l2).src =
+    document.getElementById("kuva" + l1 + l2).src =
       "kuvat/kuva" + arvattu + ".png";
     vanha1.push(l1);
     vanha1.push(l2);
   } else {
     auki = 0;
     arvaukset++;
-    document.getElementById("kuva" + l1 + "-" + l2).src =
+    document.getElementById("kuva" + l1 + l2).src =
       "kuvat/kuva" + arvattu + ".png";
     if (arvattu == array[l1][l2]) {
       vanha1.length = 0;
