@@ -31,7 +31,7 @@ function resetoi() {
   korttimäärä = 0;
   vanha1.length = 0;
   vanha2.length = 0;
-  for (let l1 = 0; li < 6; l1++) {
+  for (let l1 = 0; l1 < 6; l1++) {
     for (let l2 = 0; l2 < 6; l2++) {
       document.getElementById("kuva" + l1 + l2).src = "kuvat/kuva0.png";
     }
