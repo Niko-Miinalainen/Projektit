@@ -12,6 +12,7 @@ let arvaukset = 0;
 let auki = 0;
 let arvattu = 0;
 let korttimäärä = 0;
+let voittocounter = 0;
 let vanha1 = [];
 let vanha2 = [];
 
@@ -27,8 +28,10 @@ function resetoi() {
   korkeus = 0;
   leveys = 0;
   arvaukset = 0;
+  document.getElementById("arvaukset").innerHTML = "Arvausten määrä: " + arvaukset;
   auki = 0;
   korttimäärä = 0;
+  voittocounter = 0;
   vanha1.length = 0;
   vanha2.length = 0;
   for (let l1 = 0; l1 < 6; l1++) {
@@ -80,31 +83,42 @@ function luo() {
 }
 
 function arvaa(l1, l2) {
-  if (vanha1.length > 0 && vanha2.length > 0) {
-    document.getElementById("kuva" + vanha1[0] + vanha1[1]).src =
-      "kuvat/kuva1.png";
-    document.getElementById("kuva" + vanha2[0] + vanha2[1]).src =
-      "kuvat/kuva1.png";
-    vanha1.length = 0;
-    vanha2.length = 0;
-  }
-  if (auki == 0) {
-    auki = 1;
-    arvattu = array[l1][l2];
-    document.getElementById("kuva" + l1 + l2).src =
-      "kuvat/kuva" + arvattu + ".png";
-    vanha1.push(l1);
-    vanha1.push(l2);
+  if (array[l1][l2] == 0) {
+
   } else {
-    auki = 0;
-    arvaukset++;
-    document.getElementById("kuva" + l1 + l2).src =
-      "kuvat/kuva" + arvattu + ".png";
-    if (arvattu == array[l1][l2]) {
+    if (vanha1.length > 0 && vanha2.length > 0) {
+      document.getElementById("kuva" + vanha1[0] + vanha1[1]).src =
+        "kuvat/kuva1.png";
+      document.getElementById("kuva" + vanha2[0] + vanha2[1]).src =
+        "kuvat/kuva1.png";
       vanha1.length = 0;
-    } else {
-      vanha2.push(l1);
-      vanha2.push(l2);
+      vanha2.length = 0;
     }
+    if (auki == 0) {
+      auki = 1;
+      arvattu = array[l1][l2];
+      document.getElementById("kuva" + l1 + l2).src =
+        "kuvat/kuva" + array[l1][l2] + ".png";
+      vanha1.push(l1);
+      vanha1.push(l2);
+    } else {
+      auki = 0;
+      arvaukset++;
+      document.getElementById("arvaukset").innerHTML = "Arvausten määrä: " + arvaukset;
+      document.getElementById("kuva" + l1 + l2).src =
+        "kuvat/kuva" + array[l1][l2] + ".png";
+      if (arvattu == array[l1][l2]) {
+        array[l1][l2] = 0;
+        array[vanha1[0]][vanha1[1]] = 0;
+        vanha1.length = 0;
+        voittocounter++;
+        if (voittocounter >= korttimäärä) {
+          alert("Voitit " + arvaukset + " arvauksella!")
+        }
+      } else {
+        vanha2.push(l1);
+        vanha2.push(l2);
+      }
+    } 
   }
 }
