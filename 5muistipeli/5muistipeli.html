@@ -7,17 +7,24 @@
     <link rel="stylesheet" type="text/css" href="5muistipeli.css" />
   </head>
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="5muistipelialoitussivu.html">Aloitus</a></li>
+          <li><a href="5muistipeli.html">Muistipeli</a></li>
+        </ul>
+      </nav>
+    </header>
     <fieldset>
-      <h1>Muistipeli</h1>
-      <p>Paina alla olevia kuvia ja löydä parit</p>
-      <label for="">Anna korkeus</label>
-      <input type="number" max="6" min="1" id="korkeus" /><br />
-      <label for="">Anna leveys</label>
-      <input type="number" max="6" min="1" id="leveys" /><br />
+      <label for="">Anna korkeus ja leveys</label>
+      <input type="number" max="6" min="1" id="korkeus" />
+      <input type="number" max="6" min="1" id="leveys" />
       <button onclick="suuruus()">Luo</button>
-      <button onclick="resetoi()">Reset</button> <br />
-      <p id="arvaukset">Arvausten määrä: 0</p>
-      <p id="aika"></p>
+      <button onclick="resetoi()">Reset</button>
+      <p id="arvaukset" style="margin: 0; display: inline; float: left">
+        Arvausten määrä: 0
+      </p>
+      <p id="aika" style="margin: 0; display: inline; float: right"></p>
       <br />
       <tr id="Rivi 1">
         <td>
