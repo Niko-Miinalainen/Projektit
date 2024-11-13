@@ -118,12 +118,13 @@ function arvaa(l1, l2) {
       document.getElementById("kuva" + l1 + l2).src =
         "kuvat/kuva" + array[l1][l2] + ".png";
       if (arvattu == array[l1][l2]) {
-        // katsoo oletko voittanut
+        // Jos arvasit oikein
         array[l1][l2] = 0;
         array[vanha1[0]][vanha1[1]] = 0;
         vanha1.length = 0;
         voittocounter++;
         if (voittocounter >= korttimäärä) {
+          // katsoo oletko voittanut
           let second1 = pad(++sec % 60);
           let min1 = pad(parseInt(sec / 60, 10) % 60);
           let hour1 = pad(parseInt(sec / 3600, 10));
@@ -149,7 +150,7 @@ function arvaa(l1, l2) {
 function pad(val) {
   return val > 9 ? val : "0" + val;
 }
-
+//päivittää kelloa
 setInterval(function () {
   let second = pad(++sec % 60);
   let min = pad(parseInt(sec / 60, 10) % 60);

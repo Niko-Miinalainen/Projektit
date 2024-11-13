@@ -14,7 +14,7 @@ function naytto() {
   document.getElementById("taulu").innerHTML = näyttö;
 }
 
-// lisää laskutoimittimet?
+// lisää laskutoimittimet
 function toiminto(funktio) {
   if (functio.length < luku.length) {
     functio.push(funktio);

@@ -1,6 +1,6 @@
-let vastaus = Math.floor(Math.random() * 10) + 1;
-let arvaukset = 3;
-let arvatut = [];
+let vastaus = Math.floor(Math.random() * 10) + 1; //vastaus
+let arvaukset = 3; //monta arvausta on jäljellä
+let arvatut = []; //aiemmat arvaukset
 
 function arvaus(num) {
   let arvaus = num;
@@ -37,6 +37,7 @@ function arvaus(num) {
 }
 
 function reset() {
+  //resetoi
   vastaus = Math.floor(Math.random() * 10) + 1;
   arvaukset = 3;
   arvatut.length = 0;
