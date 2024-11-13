@@ -45,6 +45,7 @@ function resetoi() {
 }
 
 function suuruus() {
+  resetoi();
   // tarkista koon
   let luku = parseInt(document.getElementById("korkeus").value);
   let luku2 = parseInt(document.getElementById("leveys").value);
