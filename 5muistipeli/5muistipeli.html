@@ -11,12 +11,13 @@
       <h1>Muistipeli</h1>
       <p>Paina alla olevia kuvia ja löydä parit</p>
       <label for="">Anna korkeus</label>
-      <input type="text" id="korkeus" /><br />
+      <input type="number" max="6" min="1" id="korkeus" /><br />
       <label for="">Anna leveys</label>
-      <input type="text" id="leveys" /><br />
-      <p id="arvaukset">Arvausten määrä: 0</p>
+      <input type="number" max="6" min="1" id="leveys" /><br />
       <button onclick="suuruus()">Luo</button>
-      <button onclick="resetoi()">Reset</button>
+      <button onclick="resetoi()">Reset</button> <br />
+      <p id="arvaukset">Arvausten määrä: 0</p>
+      <p id="aika"></p>
       <br />
       <tr id="Rivi 1">
         <td>

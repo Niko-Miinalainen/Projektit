@@ -15,6 +15,7 @@ let korttimäärä = 0;
 let voittocounter = 0;
 let vanha1 = [];
 let vanha2 = [];
+let sec = -1;
 
 function resetoi() {
   array = [
@@ -25,10 +26,12 @@ function resetoi() {
     [0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0],
   ];
+
   korkeus = 0;
   leveys = 0;
   arvaukset = 0;
-  document.getElementById("arvaukset").innerHTML = "Arvausten määrä: " + arvaukset;
+  document.getElementById("arvaukset").innerHTML =
+    "Arvausten määrä: " + arvaukset;
   auki = 0;
   korttimäärä = 0;
   voittocounter = 0;
@@ -80,11 +83,11 @@ function luo() {
       }
     }
   }
+  sec = -1;
 }
 
 function arvaa(l1, l2) {
   if (array[l1][l2] == 0) {
-
   } else {
     if (vanha1.length > 0 && vanha2.length > 0) {
       document.getElementById("kuva" + vanha1[0] + vanha1[1]).src =
@@ -104,7 +107,8 @@ function arvaa(l1, l2) {
     } else {
       auki = 0;
       arvaukset++;
-      document.getElementById("arvaukset").innerHTML = "Arvausten määrä: " + arvaukset;
+      document.getElementById("arvaukset").innerHTML =
+        "Arvausten määrä: " + arvaukset;
       document.getElementById("kuva" + l1 + l2).src =
         "kuvat/kuva" + array[l1][l2] + ".png";
       if (arvattu == array[l1][l2]) {
@@ -113,12 +117,36 @@ function arvaa(l1, l2) {
         vanha1.length = 0;
         voittocounter++;
         if (voittocounter >= korttimäärä) {
-          alert("Voitit " + arvaukset + " arvauksella!")
+          let second1 = pad(++sec % 60);
+          let min1 = pad(parseInt(sec / 60, 10) % 60);
+          let hour1 = pad(parseInt(sec / 3600, 10));
+          alert(
+            "Voitit " +
+              arvaukset +
+              " arvauksella! Aikaa kului: " +
+              hour1 +
+              ":" +
+              min1 +
+              ":" +
+              second1
+          );
         }
       } else {
         vanha2.push(l1);
         vanha2.push(l2);
       }
-    } 
+    }
   }
 }
+
+function pad(val) {
+  return val > 9 ? val : "0" + val;
+}
+
+setInterval(function () {
+  let second = pad(++sec % 60);
+  let min = pad(parseInt(sec / 60, 10) % 60);
+  let hour = pad(parseInt(sec / 3600, 10));
+  document.getElementById("aika").innerHTML =
+    "Aika: " + hour + ":" + min + ":" + second;
+}, 1000);
