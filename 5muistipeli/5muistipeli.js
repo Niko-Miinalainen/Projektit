@@ -71,20 +71,17 @@ function suuruus() {
 function luo() {
   //valitsee mitä kortteja käyttää
   for (l1 = 0; l1 < korttimäärä; l1++) {
-    laattavalikoima.push(0);
-  }
-  for (l1 = 0; l1 < korttimäärä; l1++) {
-    let kortti = Math.floor(Math.random() * 17) + 2;
+    let kortti = Math.floor(Math.random() * 18) + 2;
     let tarkistus = 0;
-    for (l2 = 0; l2 < korttimäärä; l2++) {
-      if (kortti == laattavalikoima[l2 + 1]) {
+    for (l2 = 0; l2 < laattavalikoima.length; l2++) {
+      if (kortti == laattavalikoima[l2]) {
         tarkistus++;
       }
     }
     if (tarkistus > 0) {
       l1--;
     } else {
-      laattavalikoima[l1 + 1] = kortti;
+      laattavalikoima.push(kortti);
     }
   }
   // generoi laatat
