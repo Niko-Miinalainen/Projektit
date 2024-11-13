@@ -92,6 +92,8 @@ function arvaa(l1, l2) {
   // avaa laatan
   if (array[l1][l2] == 0) {
     // tarkistaa että ei ole oikein arvattu laatta tai harmaa laatta
+  } else if (vanha1[0] == l1 && vanha1[1] == l2) {
+    // tarkistaa että ei ole nopeasti henkilö tuplapainanut samaa laattaa
   } else {
     if (vanha1.length > 0 && vanha2.length > 0) {
       // piilottaa vanhat avatut laatat
