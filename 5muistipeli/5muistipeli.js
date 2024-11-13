@@ -16,6 +16,7 @@ let voittocounter = 0; // kuinka monta laattaparia on löydetty
 let vanha1 = []; // säilyttää avatunjen laatojen tietoja
 let vanha2 = []; // säilyttää avatunjen laatojen tietoja
 let sec = -1; // kello
+let laattavalikoima = [0]; // säilyttää mitä kuvia käytetään
 
 function resetoi() {
   // resetoi kaiken
@@ -37,6 +38,8 @@ function resetoi() {
   voittocounter = 0;
   vanha1.length = 0;
   vanha2.length = 0;
+  laattavalikoima.length = 0;
+  laattavalikoima.push(0);
   for (let l1 = 0; l1 < 6; l1++) {
     for (let l2 = 0; l2 < 6; l2++) {
       document.getElementById("kuva" + l1 + l2).src = "kuvat/kuva0.png";
@@ -66,10 +69,28 @@ function suuruus() {
 }
 
 function luo() {
+  //valitsee mitä kortteja käyttää
+  for (l1 = 0; l1 < korttimäärä; l1++) {
+    laattavalikoima.push(0);
+  }
+  for (l1 = 0; l1 < korttimäärä; l1++) {
+    let kortti = Math.floor(Math.random() * 17) + 2;
+    let tarkistus = 0;
+    for (l2 = 0; l2 < korttimäärä; l2++) {
+      if (kortti == laattavalikoima[l2 + 1]) {
+        tarkistus++;
+      }
+    }
+    if (tarkistus > 0) {
+      l1--;
+    } else {
+      laattavalikoima[l1 + 1] = kortti;
+    }
+  }
   // generoi laatat
   for (let l1 = 0; l1 < korkeus; l1++) {
     for (let l2 = 0; l2 < leveys; l2++) {
-      let kortti = Math.floor(Math.random() * korttimäärä) + 2;
+      let kortti = Math.floor(Math.random() * korttimäärä) + 1;
       let tarkistus = 0;
       for (let l3 = 0; l3 < korkeus; l3++) {
         for (let l4 = 0; l4 < leveys; l4++) {
@@ -110,7 +131,7 @@ function arvaa(l1, l2) {
       auki = 1;
       arvattu = array[l1][l2];
       document.getElementById("kuva" + l1 + l2).src =
-        "kuvat/kuva" + array[l1][l2] + ".png";
+        "kuvat/kuva" + laattavalikoima[array[l1][l2]] + ".png";
       vanha1.push(l1);
       vanha1.push(l2);
     } else {
@@ -119,7 +140,7 @@ function arvaa(l1, l2) {
       document.getElementById("arvaukset").innerHTML =
         "Arvausten määrä: " + arvaukset;
       document.getElementById("kuva" + l1 + l2).src =
-        "kuvat/kuva" + array[l1][l2] + ".png";
+        "kuvat/kuva" + laattavalikoima[array[l1][l2]] + ".png";
       if (arvattu == array[l1][l2]) {
         // Jos arvasit oikein
         array[l1][l2] = 0;
