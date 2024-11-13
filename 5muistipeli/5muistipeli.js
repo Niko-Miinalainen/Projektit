@@ -71,7 +71,8 @@ function suuruus() {
 function luo() {
   //valitsee mitä kortteja käyttää
   for (l1 = 0; l1 < korttimäärä; l1++) {
-    let kortti = Math.floor(Math.random() * 18) + 2;
+    let kortti =
+      Math.floor(Math.random() * 18 /* lukua voi nostaa jos lisää kuvia */) + 2;
     let tarkistus = 0;
     for (l2 = 0; l2 < laattavalikoima.length; l2++) {
       if (kortti == laattavalikoima[l2]) {
