@@ -5,19 +5,20 @@ let array = [
   [0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0],
-];
-let korkeus = 0;
-let leveys = 0;
-let arvaukset = 0;
-let auki = 0;
-let arvattu = 0;
-let korttimäärä = 0;
-let voittocounter = 0;
-let vanha1 = [];
-let vanha2 = [];
-let sec = -1;
+]; // säilyttää piilotettujen laatojen tiedot
+let korkeus = 0; // laudan korkeus
+let leveys = 0; // laudan leveys
+let arvaukset = 0; // arvausten määrä
+let auki = 0; // onko joku laatta avattuna
+let arvattu = 0; // avatun laatan kortti
+let korttimäärä = 0; // kuinka monta laattaparia on
+let voittocounter = 0; // kuinka monta laattaparia on löydetty
+let vanha1 = []; // säilyttää avatunjen laatojen tietoja
+let vanha2 = []; // säilyttää avatunjen laatojen tietoja
+let sec = -1; // kello
 
 function resetoi() {
+  // resetoi kaiken
   array = [
     [0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0],
@@ -26,7 +27,6 @@ function resetoi() {
     [0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0],
   ];
-
   korkeus = 0;
   leveys = 0;
   arvaukset = 0;
@@ -45,6 +45,7 @@ function resetoi() {
 }
 
 function suuruus() {
+  // tarkista koon
   let luku = parseInt(document.getElementById("korkeus").value);
   let luku2 = parseInt(document.getElementById("leveys").value);
   let kertoma = luku * luku2;
@@ -64,6 +65,7 @@ function suuruus() {
 }
 
 function luo() {
+  // generoi laatat
   for (let l1 = 0; l1 < korkeus; l1++) {
     for (let l2 = 0; l2 < leveys; l2++) {
       let kortti = Math.floor(Math.random() * korttimäärä) + 2;
@@ -87,9 +89,12 @@ function luo() {
 }
 
 function arvaa(l1, l2) {
+  // avaa laatan
   if (array[l1][l2] == 0) {
+    // tarkistaa että ei ole oikein arvattu laatta tai harmaa laatta
   } else {
     if (vanha1.length > 0 && vanha2.length > 0) {
+      // piilottaa vanhat avatut laatat
       document.getElementById("kuva" + vanha1[0] + vanha1[1]).src =
         "kuvat/kuva1.png";
       document.getElementById("kuva" + vanha2[0] + vanha2[1]).src =
@@ -98,6 +103,7 @@ function arvaa(l1, l2) {
       vanha2.length = 0;
     }
     if (auki == 0) {
+      // tarkistaako onko muita laattoja auki
       auki = 1;
       arvattu = array[l1][l2];
       document.getElementById("kuva" + l1 + l2).src =
@@ -112,6 +118,7 @@ function arvaa(l1, l2) {
       document.getElementById("kuva" + l1 + l2).src =
         "kuvat/kuva" + array[l1][l2] + ".png";
       if (arvattu == array[l1][l2]) {
+        // katsoo oletko voittanut
         array[l1][l2] = 0;
         array[vanha1[0]][vanha1[1]] = 0;
         vanha1.length = 0;
