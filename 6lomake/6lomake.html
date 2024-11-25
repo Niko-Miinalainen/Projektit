@@ -6,6 +6,28 @@
     <title>Akun ja nikon tallentava lomake</title>
     <link rel="stylesheet" type="text/css" href="6lomake.css" />
   </head>
-  <body></body>
+  <body>
+    <form id="form">
+      <fieldset>
+        <h1><b>Tallentava lomake</b></h1>
+        <label for="enimi">Etunimi:</label>
+        <input type="text" id="enimi" /><br />
+        <label for="snimi">Sukunimi:</label>
+        <input type="text" id="snimi" /><br />
+        <label for="osoite">Osoite:</label>
+        <input type="text" id="osoite" /><br />
+        <label for="posti">Postinumero:</label>
+        <input type="text" id="posti" /><br />
+        <label for="paikka">Postitoimipaikka:</label>
+        <input type="text" id="paikka" /><br />
+        <label for="puhelin">Puhelinnumero:</label>
+        <input type="text" id="puhelin" /><br />
+        <label for="email">Sähköposti:</label>
+        <input type="text" id="email" /><br />
+        <button onclick="tallenna()">Tallenna</button>
+        <button onclick="tyhjenna()">Tyhjennä</button>
+      </fieldset>
+    </form>
+  </body>
   <script src="6lomake.js"></script>
 </html>
