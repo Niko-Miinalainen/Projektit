@@ -6,6 +6,10 @@ for (let i = 0; i < localStorage.length; i++) {
     "<p id=" +
     id +
     ">" +
+    "<b>" +
+    id +
+    ". " +
+    "</b>" +
     käyttis +
     "</p>" +
     "<button type='button' id=" +
@@ -56,6 +60,10 @@ function tallenna() {
       "<p id=" +
       id +
       ">" +
+      "<b>" +
+      id +
+      "." +
+      "</b>" +
       käyttis +
       "</p>" +
       "<button type='button' id=" +
