@@ -6,6 +6,23 @@
     <title>Akun ja nikon nimipäiväkalenteri</title>
     <link rel="stylesheet" type="text/css" href="9nimipäivä.css" />
   </head>
-  <body></body>
+  <body>
+    <fieldset>
+      <h1><b>Nimipäivää viettävät</b></h1>
+      <p id="t"></p>
+      <h4>Eilen vietti</h4>
+      <p id="e"></p>
+      <h4>Huomenna viettää</h4>
+      <p id="h"></p>
+      <p>anna päivä:</p>
+      <input id="päivä" type="date" />
+      <button onclick="päivänä()">Katso</button>
+      <p id="p"></p>
+      <p>anna nimi:</p>
+      <input id="nimi" type="text" />
+      <button onclick="nimellä()">Katso</button>
+      <p id="n"></p>
+    </fieldset>
+  </body>
   <script src="9nimipäivä.js"></script>
 </html>
