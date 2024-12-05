@@ -34,13 +34,6 @@ function tänään() {
       document.getElementById("t").innerHTML =
         data.day + "." + data.month + " " + data.nameday[maa];
     });
-
-  console.log(
-    fetch(url, {
-      method: "GET",
-      headers,
-    }).then((response) => response.json())
-  );
 }
 
 huomenna();
