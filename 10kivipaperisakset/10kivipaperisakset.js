@@ -6,6 +6,8 @@ function resetoi() {
   tasapelit = 0;
   voitot = 0;
   tappiot = 0;
+  document.getElementById("pisteytys").innerHTML =
+    "Voitot/Tasapelit/Tappiot: " + voitot + "/" + tasapelit + "/" + tappiot;
 }
 
 function arvaus(käsi) {
