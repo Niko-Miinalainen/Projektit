@@ -6,6 +6,16 @@
     <title>Akun ja nikon kivipaperisakset</title>
     <link rel="stylesheet" type="text/css" href="10kivipaperisakset.css" />
   </head>
-  <body></body>
+  <body>
+    <fieldset>
+      <button onclick="resetoi()">Resetoi</button>
+      <p id="pisteytys">Voitot/Tasapelit/Tappiot: 0/0/0</p>
+      <p id="tulos">Viimeisin Tulos.</p>
+      <br /><br />
+      <img src="10kuvat/kivi.png" id="kivi" onclick="arvaus('kivi')" />
+      <img src="10kuvat/paperi.png" id="paperi" onclick="arvaus('paperi')" />
+      <img src="10kuvat/sakset.png" id="sakset" onclick="arvaus('sakset')" />
+    </fieldset>
+  </body>
   <script src="10kivipaperisakset.js"></script>
 </html>
