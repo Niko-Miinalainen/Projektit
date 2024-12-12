@@ -6,6 +6,35 @@
     <title>Akun ja nikon scrumboard</title>
     <link rel="stylesheet" type="text/css" href="8scrumboard.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Scrumboard</h1>
+      <input type="text" id="uusi" />
+      <button onclick="uusi()">Luo uusi</button>
+    </header>
+    <main>
+      <div class="osio" id="aloittavat">
+        <h1>Alotettavat</h1>
+        <div class="tehtävä" id="1">
+          <p>Tehtävä 1</p>
+          <img src="8kuva.png" onclick="poista(1)" />
+        </div>
+        <div class="tehtävä" id="2">
+          <p>Tehtävä 2</p>
+          <img src="8kuva.png" onclick="poista(2)" />
+        </div>
+        <div class="tehtävä" id="3">
+          <p>Tehtävä 3</p>
+          <img src="8kuva.png" onclick="poista(3)" />
+        </div>
+      </div>
+      <div class="osio" id="kesken">
+        <h1>Kesken</h1>
+      </div>
+      <div class="osio" id="valmis">
+        <h1>Valmiit</h1>
+      </div>
+    </main>
+  </body>
   <script src="8scrumboard.js"></script>
 </html>

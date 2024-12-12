@@ -1,0 +1,53 @@
+body {
+  width: 1100px;
+  background-image: linear-gradient(to left, purple, gold);
+  margin: 0 auto;
+}
+.osio {
+  margin-top: 50px;
+  width: 300px;
+  min-height: 500px;
+  float: left;
+  margin-left: 50px;
+  background-color: orange;
+  border-radius: 10px;
+}
+
+.osio h1 {
+  text-align: center;
+}
+header h1 {
+  text-align: center;
+}
+
+header {
+  width: 300px;
+  margin-left: 400px;
+  background-color: orange;
+  border-radius: 10px;
+}
+
+.tehtävä {
+  width: 250px;
+  min-height: 20px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+img {
+  height: 20px;
+  width: 20px;
+  float: right;
+}
+
+.tehtävä p {
+  float: left;
+  margin-top: 0px;
+  max-width: 230px;
+}
+
+#uusi {
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
