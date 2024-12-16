@@ -3,6 +3,10 @@ function uusi() {
   console.log(aika);
   let uus = document.createElement("div");
   uus.id = "div_" + aika;
+  uus.draggable = true;
+  uus.addEventListener("dragstart", function () {
+    siirrä(event);
+  });
   console.log(uus);
   document.getElementById("aloittavat").appendChild(uus);
   document.getElementById("div_" + aika).classList.add("tehtävä");
@@ -17,11 +21,28 @@ function uusi() {
   let uusk = document.createElement("img");
   uusk.id = "k_" + aika;
   uusk.src = "8kuva.png";
-  uusk.onclick = 'poista("div_' + aika + '")';
+
+  uusk.addEventListener("click", function () {
+    poista("div_" + aika);
+  });
   console.log(uusk);
   document.getElementById("div_" + aika).appendChild(uusk);
 }
 
 function poista(num) {
   document.getElementById(num).remove();
+}
+
+function siirrä(e) {
+  e.dataTransfer.setData("id", e.target.id);
+}
+
+function saakotiputtaa(e) {
+  e.preventDefault();
+}
+
+function tiputa(e) {
+  e.preventDefault();
+  let data = e.dataTransfer.getData("id");
+  e.target.appendChild(document.getElementById(data));
 }
