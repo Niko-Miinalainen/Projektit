@@ -6,6 +6,116 @@
     <title>Akun ja nikon pizzapaikka</title>
     <link rel="stylesheet" type="text/css" href="11pizzapaikka.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Akun pizzeria</h1>
+      <p id="kori">Korin sisältö = 0€</p>
+      <button onclick="avaa()">Avaa kori</button>
+    </header>
+    <div class="lista">
+      <div class="pizza" id="p1">
+        <button onclick="lisää(1)">Lisää koriin</button>
+        <h4 id="1nimi">1. Americano</h4>
+        <h6>8.99€</h6>
+        <p id="1tiedot">Ananas, Kinkku, Aurajuusto</p>
+      </div>
+      <div class="pizza" id="p2">
+        <button onclick="lisää(2)">Lisää koriin</button>
+        <h4 id="2nimi">2. Margherita</h4>
+        <h6>8.99€</h6>
+        <p id="2tiedot">Tomaatti, Mozzarella</p>
+      </div>
+      <div class="pizza" id="p3">
+        <button onclick="lisää(3)">Lisää koriin</button>
+        <h4 id="3nimi">3. Mafia</h4>
+        <h6>9.99€</h6>
+        <p id="3tiedot">Ananas, Kinkku, Aurajuusto, Meetvursti</p>
+      </div>
+      <div class="pizza" id="p4">
+        <button onclick="lisää(4)">Lisää koriin</button>
+        <h4 id="4nimi">4. Akun Erikoinen</h4>
+        <h6>10.99€</h6>
+        <p id="4tiedot">Ananas, Kinkku, Aurajuusto, Meetvursti, Mozzarella</p>
+      </div>
+    </div>
+    <div class="lista">
+      <div class="pizza" id="p5">
+        <button onclick="lisää(5)">Lisää koriin</button>
+        <h4 id="5nimi">5. Vegan</h4>
+        <h6>15.99€</h6>
+        <p id="5tiedot">Tomaattikastike</p>
+      </div>
+      <div class="pizza" id="p6">
+        <button onclick="lisää(6)">Lisää koriin</button>
+        <h4 id="6nimi">6. Meat</h4>
+        <h6>11.99€</h6>
+        <p id="6tiedot">
+          Kinkku, Pepperooni, Meetvursti, Kana, Kebab, Jauhenliha
+        </p>
+      </div>
+      <div class="pizza" id="p7">
+        <button onclick="lisää(7)">Lisää koriin</button>
+        <h4 id="7nimi">7. Luv me cheese</h4>
+        <h6>11.99€</h6>
+        <p id="7tiedot">
+          Mozzarella, Aurajuusto, Leipäjuusto, Raejuusto, Fetajuusto, Parmesaani
+        </p>
+      </div>
+      <div class="pizza" id="p8">
+        <button onclick="lisää(8)">Lisää koriin</button>
+        <h4 id="8nimi">8. Pizzaan kuuluu</h4>
+        <h6>9.99€</h6>
+        <p id="8tiedot">Ananas, Ananas, Ananas, Ananas</p>
+      </div>
+    </div>
+    <div class="lista">
+      <div class="pizza" id="oma">
+        <button onclick="lisää(10)">Lisää koriin</button>
+        <h4>10. Luo oma</h4>
+        <p>Alkaen: 6.99€ +1€ per täyte</p>
+        <input type="checkbox" id="t1" />
+        <label for="t1">Ananas</label>
+        <br />
+        <input type="checkbox" id="t2" />
+        <label for="t2">Aurajuusto</label>
+        <br />
+        <input type="checkbox" id="t3" />
+        <label for="t3">Mozzarella</label>
+        <br />
+        <input type="checkbox" id="t4" />
+        <label for="t4">Leipäjuusto</label>
+        <br />
+        <input type="checkbox" id="t5" />
+        <label for="t5">Raejuusto</label>
+        <br />
+        <input type="checkbox" id="t6" />
+        <label for="t6">Fetajuusto</label>
+        <br />
+        <input type="checkbox" id="t7" />
+        <label for="t7">Parmesaani</label>
+        <br />
+        <input type="checkbox" id="t8" />
+        <label for="t8">Kinkku</label>
+        <br />
+        <input type="checkbox" id="t9" />
+        <label for="t9">Pepperooni</label>
+        <br />
+        <input type="checkbox" id="t10" />
+        <label for="t10">Meetvursti</label>
+        <br />
+        <input type="checkbox" id="t11" />
+        <label for="t11">Kana</label>
+        <br />
+        <input type="checkbox" id="t12" />
+        <label for="t12">Kebab</label>
+        <br />
+        <input type="checkbox" id="t13" />
+        <label for="t13">Jauhenliha</label>
+        <br />
+        <input type="checkbox" id="t14" />
+        <label for="t14">Tomaatti</label>
+      </div>
+    </div>
+  </body>
   <script src="11pizzapaikka.js"></script>
 </html>
